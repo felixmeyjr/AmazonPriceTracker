@@ -17,7 +17,11 @@ def run(url):
 
 
 if __name__ == '__main__':
+    #input_url = (input("Amazon URL: "))
+    #URL = input_url
+
     URL = "https://www.amazon.de/dp/B08C5HYHYB/"
+    #print(URL)
 
     print(run(URL))
 
