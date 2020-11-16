@@ -55,9 +55,11 @@ def get_product_details(url):
         soup = BeautifulSoup(page.content, "html5lib")
         title = soup.find(id="productTitle")
         price = soup.find(id="priceblock_ourprice")
+        print(price)
         if price is None:
             price = soup.find(id="priceblock_dealprice")
             details["deal"] = True
+            print("Price is None")
         if title is not None and price is not None:
             details["name"] = title.get_text().strip()
             details["price"] = get_price(price.get_text())
